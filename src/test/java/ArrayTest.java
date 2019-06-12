@@ -29,4 +29,9 @@ public class ArrayTest {
     public void removeFirstDuplications() {
         assertThat(Array.unique(Array.of(1, 1, 2)), equalTo(Array.of(1, 2)));
     }
+
+    @Test
+    public void removeMiddleDuplications() {
+        assertThat(Array.unique(Array.of(1, 2, 2, 3)), equalTo(Array.of(1, 2, 3)));
+    }
 }
