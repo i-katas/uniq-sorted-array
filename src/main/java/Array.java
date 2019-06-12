@@ -15,8 +15,8 @@ public class Array {
             int dups = 0;
             for (int last = i + 1; last <= end && array[i] == array[last]; last++) {
                 dups++;
-                System.arraycopy(array, last + 1, array, i + 1, end - last);
             }
+            System.arraycopy(array, i + dups + 1, array, i + 1, end + 1 - (i + dups + 1));
             end -= dups;
         }
         return Arrays.copyOf(array, end + 1);
