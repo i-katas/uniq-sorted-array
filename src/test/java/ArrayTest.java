@@ -17,5 +17,6 @@ public class ArrayTest {
     @Test
     public void removeDuplicationsWithArrayContainingSameElements() {
         assertThat(Array.unique(Array.of(1, 1)), equalTo(Array.of(1)));
+        assertThat(Array.unique(Array.of(1, 1, 1)), equalTo(Array.of(1)));
     }
 }
