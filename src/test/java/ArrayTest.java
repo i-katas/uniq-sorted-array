@@ -8,6 +8,10 @@ import static org.junit.Assert.assertThat;
  * @since 2019-06-12
  */
 public class ArrayTest {
+    @Test
+    public void returnImmediatelyWithEmptyArray() {
+        assertThat(Array.unique(new int[0]), equalTo(new int[0]));
+    }
 
     @Test
     public void returnImmediatelyWithArrayContainingUniqueElements() {
