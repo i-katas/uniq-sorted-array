@@ -12,11 +12,7 @@ public class Array {
     public static int[] unique(int[] array) {
         int size = array.length;
         int last = 1;
-        if (last < array.length && array[0] == array[last]) {
-            size--;
-            last++;
-        }
-        if (last < array.length && array[0] == array[last]) {
+        while (last < array.length && array[0] == array[last]) {
             size--;
             last++;
         }
