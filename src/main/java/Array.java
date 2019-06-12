@@ -14,9 +14,9 @@ public class Array {
         int i = 0;
         while (i < size - 1) {
             int last = i + 1;
-            while (last < array.length && array[i] == array[last]) {
+            while (last < size && array[i] == array[last]) {
+                System.arraycopy(array, last + 1, array, i + 1, size - (last + 1));
                 size--;
-                last++;
             }
             i++;
         }
