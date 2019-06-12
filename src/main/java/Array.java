@@ -14,9 +14,11 @@ public class Array {
         int last = 1;
         if (last < array.length && array[0] == array[last]) {
             size--;
+            last++;
         }
-        if (last + 1 < array.length && array[0] == array[last + 1]) {
+        if (last < array.length && array[0] == array[last]) {
             size--;
+            last++;
         }
         return Arrays.copyOf(array, size);
     }
