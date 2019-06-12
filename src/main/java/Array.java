@@ -14,6 +14,9 @@ public class Array {
         if (array[0] == array[1]) {
             size--;
         }
+        if (2 < array.length && array[0] == array[2]) {
+            size--;
+        }
         return Arrays.copyOf(array, size);
     }
 }
