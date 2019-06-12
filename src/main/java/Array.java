@@ -11,10 +11,21 @@ public class Array {
 
     public static int[] unique(int[] array) {
         int size = array.length;
-        int last = 1;
-        while (last < array.length && array[0] == array[last]) {
-            size--;
-            last++;
+        int i = 0;
+        if (i < size - 1) {
+            int last = i + 1;
+            while (last < array.length && array[i] == array[last]) {
+                size--;
+                last++;
+            }
+            i++;
+        }
+        if (i < size - 1) {
+            int last = i + 1;
+            while (last < array.length && array[i] == array[last]) {
+                size--;
+                last++;
+            }
         }
         return Arrays.copyOf(array, size);
     }
