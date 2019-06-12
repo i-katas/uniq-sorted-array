@@ -8,6 +8,6 @@ public class Array {
     }
 
     public static int[] unique(int[] array) {
-        return new int[0];
+        return array;
     }
 }
