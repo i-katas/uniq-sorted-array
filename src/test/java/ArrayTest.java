@@ -19,4 +19,9 @@ public class ArrayTest {
         assertThat(Array.unique(Array.of(1, 1)), equalTo(Array.of(1)));
         assertThat(Array.unique(Array.of(1, 1, 1)), equalTo(Array.of(1)));
     }
+
+    @Test
+    public void removeLastDuplications() {
+        assertThat(Array.unique(Array.of(1, 2, 2)), equalTo(Array.of(1, 2)));
+    }
 }
