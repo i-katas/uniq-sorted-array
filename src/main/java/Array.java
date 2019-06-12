@@ -11,10 +11,11 @@ public class Array {
 
     public static int[] unique(int[] array) {
         int size = array.length;
-        if (array[0] == array[1]) {
+        int last = 1;
+        if (last < array.length && array[0] == array[last]) {
             size--;
         }
-        if (2 < array.length && array[0] == array[2]) {
+        if (last + 1 < array.length && array[0] == array[last + 1]) {
             size--;
         }
         return Arrays.copyOf(array, size);
