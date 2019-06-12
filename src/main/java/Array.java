@@ -11,6 +11,9 @@ public class Array {
 
     public static int[] unique(int[] array) {
         int size = array.length;
+        if (array[0] == array[1]) {
+            size--;
+        }
         return Arrays.copyOf(array, size);
     }
 }
